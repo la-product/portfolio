@@ -1,0 +1,142 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+// Include any default variable overrides here (though functions won’t be available)
+$input-focus-bg: transparent;
+$input-focus-box-shadow: none;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body {
+  background: linear-gradient(135deg, #300a24 0%, #5e2750 50%, #772953 100%);
+  font-family: "Ubuntu Mono", sans-serif;
+  color: lightgray;
+}
+
+h1 {
+  font-family: "Ubuntu";
+  text-shadow: 8px 8px 10px rgba(0, 0, 0, 0.7);
+}
+
+h4 {
+  font-weight: bold;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  padding: 8px;
+}
+
+.card {
+  margin: auto;
+  height: 400px;
+  color: lightgrey;
+  border: none;
+  max-width: 18rem;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #300a24 0%, #5e2750 50%, #772953 100%);
+  padding: 10px;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  box-shadow: 0px 1px 10px black;
+  background: rgb(211, 211, 211);
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: navbarLine 4s ease forwards;
+}
+
+.nav-link {
+  color: rgba(211, 211, 211, 0.6) !important;
+}
+.nav-link:hover {
+  color: rgb(211, 211, 211) !important;
+  border-bottom: 1px solid lightgray;
+}
+
+@keyframes navbarLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-nav .nav-link {
+    padding: 10px 14px;
+    display: inline-block;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 6px;
+    margin-top: 10px;
+  }
+}
+.imgAbout {
+  border-radius: 30px;
+  box-shadow: 15px 15px 20px rgb(0, 0, 0);
+}
+
+.aboutMe {
+  text-align: left;
+}
+
+.svgDesc {
+  font-size: 15px;
+}
+
+form {
+  border: solid 1px black;
+  border-radius: 20px;
+  box-shadow: 15px 15px 20px rgb(0, 0, 0);
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"] {
+  background-color: transparent;
+  color: lightgrey;
+  border: none;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+input[type="email"] {
+  background-color: transparent;
+  color: lightgrey;
+  border: none;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+textarea#textArea {
+  background-color: transparent;
+  color: lightgrey;
+  border: none;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  height: 100px;
+  resize: none;
+}
+
+.form-control::placeholder {
+  color: lightgrey;
+  opacity: 0.6;
+}
+
+.form-control:focus {
+  border: solid 1px blac;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  color: lightgrey;
+}
+
+.btn {
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+// Then add additional custom code here
