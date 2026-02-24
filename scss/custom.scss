@@ -26,11 +26,11 @@ h4 {
 }
 
 .card {
-  margin: auto;
-  height: 400px;
+  margin-bottom: 20px;
   color: lightgrey;
-  border: none;
   max-width: 18rem;
+
+  box-shadow: 3px 3px 10px rgb(0, 0, 0);
 }
 
 .navbar {
@@ -137,6 +137,7 @@ textarea#textArea {
 
 .btn {
   box-shadow: 3px 3px 10px rgb(0, 0, 0);
+  font-size: 0.75rem;
 }
 
 // Then add additional custom code here
