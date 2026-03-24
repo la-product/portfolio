@@ -7,6 +7,8 @@ export const fetchWeather = async (lat, lon) => {
     const response = await fetch(url);
     const data = await response.json();
 
+    console.log(data);
+
     return {
       temperature: data.current_weather.temperature,
       weathercode: data.current_weather.weathercode,
