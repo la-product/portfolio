@@ -12030,7 +12030,6 @@ h4, .h4 {
 
 .nav-link:hover {
   color: rgb(211, 211, 211) !important;
-  border-bottom: 1px solid lightgray;
 }
 
 @keyframes navbarLine {

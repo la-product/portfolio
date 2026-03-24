@@ -56,7 +56,6 @@ h4 {
 }
 .nav-link:hover {
   color: rgb(211, 211, 211) !important;
-  border-bottom: 1px solid lightgray;
 }
 
 @keyframes navbarLine {
@@ -138,5 +137,3 @@ textarea#textArea {
   box-shadow: 3px 3px 10px rgb(0, 0, 0);
   font-size: 0.75rem;
 }
-
-// Then add additional custom code here
