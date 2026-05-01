@@ -20,8 +20,9 @@
       <div class="container-fluid">
         <!-- Weather -->
         <div class="d-flex align-items-center me-2">
-          <img id="icons" src="./img/placeholder.png" alt="počasí" />
+          <img id="icons" src="./img/placeholder.png" alt="weather" />
           <p id="weather" class="m-2 fs-5 fw-bold"></p>
+          <p id="location" class="m-2 fs-5 fw-bold"></p>
         </div>
 
         <!-- Burger -->
@@ -41,7 +42,7 @@
           class="collapse navbar-collapse justify-content-center"
           id="navMenu"
         >
-          <ul class="navbar-nav fs-5">
+          <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
             </li>
@@ -73,7 +74,7 @@
             <img src="img/me.JPEG" alt="myself" class="img-fluid imgAbout" />
           </div>
           <div class="col-12 col-lg-6 col-md-6">
-            <h2 class="my-3">Hi, I'm @dominik</h2>
+            <h2 class="my-3" id="blinking_cursor">Hi, I'm @dominik</h2>
             <p class="aboutMe my-3">
               I have over 10 years of experience in the business sphere, ranging
               from sales representative positions to operations management. As a
@@ -859,8 +860,8 @@
               programming, where I find different approaches to structuring
               problem-solving. <br /><br />I also enjoy reading fantasy, which
               has been part of my life since childhood. Even before PCs became a
-              common part of households, I grew up playing Dračí doupě and the
-              collectible card game Magic: The Gathering. When the internet
+              common part of households, I grew up playing Dungeon & Dragons and
+              the collectible card game Magic: The Gathering. When the internet
               arrived, I got into gaming—especially MMORPGs such as World of
               Warcraft and Lineage II. <br /><br />Nowadays, I focus more on
               reading fantasy books, learning and most importantly, spending
@@ -879,42 +880,46 @@
         <div class="row">
           <h1 class="m-4">Contact</h1>
           <div class="col-lg-6">
-            <form class="row border-none">
+            <div id="alert-placeholder"></div>
+            <form class="row border-none" action="./send.php" method="POST">
               <div class="col mb-3">
-                <label for="inputName" class="form-label">Your Name:</label>
+                <label for="name" class="form-label">Your Name:</label>
                 <input
                   type="text"
                   class="form-control"
                   id="name"
                   placeholder="John"
+                  name="name"
                 />
               </div>
               <div class="col mb-3">
-                <label for="inputEmail" class="form-label"
-                  >Email Address:</label
-                >
+                <label for="email" class="form-label">Email Address:</label>
                 <input
                   type="email"
                   class="form-control"
                   id="email"
                   placeholder="your@email.com"
+                  name="email"
                 />
               </div>
-              <div class="col-12 mb-3">
-                <label for="inputSubject" class="form-label">Subject:</label>
-                <input type="text" id="subject" class="form-control" />
-              </div>
+
               <div class="col-12 mb-3">
                 <label for="inputText" class="form-label">Message:</label>
                 <textarea
-                  name="textArea"
-                  id="textArea"
+                  id="message"
                   class="form-control"
                   placeholder="Leave me a message..."
+                  name="message"
                 ></textarea>
               </div>
               <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-secondary">Send</button>
+                <button
+                  type="submit"
+                  value="send"
+                  class="btn btn-outline-light"
+                >
+                  Send
+                </button>
               </div>
             </form>
           </div>
@@ -995,7 +1000,7 @@
                   </g>
                 </g>
               </svg>
-              <p class="m-2">+420 734 675 790</p>
+              <p class="m-3">+420 734 675 790</p>
             </div>
             <br />
             <i class="fa-regular fa-envelope"></i>
@@ -1034,6 +1039,41 @@
                 </g>
               </svg>
               <p>dominik.kovacik@gmail.com</p>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                height="50px"
+                width="50px"
+                version="1.1"
+                id="Layer_1"
+                viewBox="0 0 236.656 236.656"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    style="fill: #0071bc"
+                    d="M206.045,87.682c32.726,28.83,27.592,96.299,24.888,134.754c-0.092,1.421-0.688,2.521-1.467,3.346   c-0.229,1.421-1.1,2.796-2.613,3.209c-13.613,3.713-31.213,0.779-44.964-1.696c-1.421-0.229-1.971-1.329-1.925-2.429   c-0.092-0.183-0.092-0.413-0.137-0.596c-0.871-0.825-1.421-2.108-1.238-3.804c1.421-15.355,2.2-30.709,1.833-46.156   c-0.183-7.654-0.504-15.492-1.375-23.101c-1.925-17.188-19.067-35.751-35.155-21.771c-22.642,19.617-12.421,70.723-10.679,96.94   c0.137,1.788-1.054,2.75-2.383,2.979c-0.413,0.917-1.146,1.742-2.383,2.2c-7.379,2.658-16.18,2.521-23.972,2.658   c-6.967,0.183-14.621,0.779-20.855-2.704c-0.183-0.092-0.275-0.275-0.412-0.458c-1.421-0.642-2.521-1.925-2.613-3.896   c-1.283-47.668-5.958-100.057,3.713-146.946c0.183-0.871,0.642-1.375,1.238-1.65c0.321-0.229,0.642-0.458,1.054-0.596   c10.909-3.071,25.576,0.596,36.714,1.833c3.529,0.367,7.013,0.458,8.892,3.85c0.688,1.283,1.008,2.933,1.1,4.675   C150.769,70.723,188.536,72.281,206.045,87.682z"
+                  />
+                  <path
+                    style="fill: #0071bc"
+                    d="M59.787,82.869c0.596,0.871,0.963,1.879,0.871,2.979c-4.629,48.081-5.408,96.207-2.383,144.425   c0.183,3.117-2.658,5.317-5.454,5.5c-13.842,0.779-27.638,1.054-41.526,0.779c-3.071-0.046-5.363-2.475-5.454-5.454   c-1.65-48.035-5.821-101.982,5.363-149.1c0.321-1.329,1.146-2.017,2.108-2.292c0.046-0.137,0.137-0.275,0.229-0.412   c-0.229-0.963,0.183-2.017,1.054-2.521c4.904-3.163,11.917-1.467,17.6-1.512c8.159-0.092,16.363-0.321,24.476,0.137   C61.024,75.673,62.033,80.44,59.787,82.869z"
+                  />
+                  <path
+                    style="fill: #0071bc"
+                    d="M37.649,61.693c-1.696,0.138-3.3,0-4.813-0.275c-20.9,3.438-28.967-28.417-19.755-44.459   C18.398,7.7,28.986,0.046,39.986,0c11.321,0,20.488,9.9,24.109,19.892C71.246,39.509,58.962,60.272,37.649,61.693z"
+                  />
+                </g>
+              </svg>
+              <br />
+              <a
+                href="http://www.linkedin.com/in/dominikkovacik"
+                id="linkedin"
+                target="_blank"
+                class="mb-3"
+                >LinkedIN</a
+              >
             </div>
           </div>
         </div>
@@ -1079,5 +1119,25 @@
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const params = new URLSearchParams(window.location.search);
+        const alertPlaceholder = document.querySelector("#alert-placeholder");
+        if (params.has("status")) {
+          let message = "";
+          let alertType = "";
+          if (params.get("status") === "success") {
+            message = "Email has been sent successfully.";
+          } else if (params.get("status") === "error") {
+            message = "There was an error sending the email. Try again.";
+          }
+          if (message) {
+            const alertDiv = document.createElement("div");
+            alertDiv.innerText = message;
+            alertPlaceholder.appendChild(alertDiv);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
